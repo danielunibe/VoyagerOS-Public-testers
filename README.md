@@ -18,4 +18,8 @@ Abre un [reporte de problema](https://github.com/danielunibe/VoyagerOS-Public-te
 
 ## Material visual
 
+El siguiente fondo es arte promocional conceptual para el escritorio de demostración. No es una captura ni evidencia funcional del producto.
+
+![Fondo promocional conceptual, no es una captura del producto](media/voyageros-0.2.0-demo-wallpaper.png)
+
 Las capturas del producto se identificarán como capturas reales de una compilación concreta. El arte promocional se identificará por separado y no se presentará como evidencia funcional.
