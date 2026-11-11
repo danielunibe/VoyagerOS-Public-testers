@@ -1,0 +1,52 @@
+name: Reportar un problema
+description: Ayuda a reproducir un fallo de VoyagerOS.
+title: "[Problema]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Comparte únicamente detalles necesarios para reproducir el problema. No adjuntes carpetas, registros ni capturas que expongan datos personales.
+  - type: input
+    id: version
+    attributes:
+      label: Versión de VoyagerOS
+      description: Indica el número visible en la aplicación o en la descarga.
+      placeholder: 0.2.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Versión de Windows
+      placeholder: Windows 11, versión y arquitectura
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado observado
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia opcional
+      description: Quita nombres, rutas, notificaciones y cualquier otro dato personal antes de adjuntar una captura.
+    validations:
+      required: false
