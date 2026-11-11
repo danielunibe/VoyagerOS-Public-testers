@@ -8,9 +8,9 @@ Repositorio público de distribución de VoyagerOS. Aquí se publicarán las des
 
 Consulta la [guía de distribución y actualizaciones](docs/DISTRIBUCION_Y_ACTUALIZACIONES.md). Por ahora, las actualizaciones se instalan desde la página Releases.
 
-## Versión 0.2.0
+## Versión 0.2.1
 
-La numeración pública comienza en **0.2.0**. Esta versión está en preparación; todavía no hay un instalador publicado en este repositorio. La descarga se habilitará al completar la validación de la candidata, el paquete, su procedencia y los datos de integridad.
+La numeración pública comienza en **0.2.1**. Esta versión está en preparación; todavía no hay un instalador publicado en este repositorio. La descarga se habilitará al completar la validación de la candidata, el paquete, su procedencia y los datos de integridad.
 
 Cada publicación incluirá las novedades confirmadas, requisitos, instrucciones de instalación y hashes de los archivos descargables. No se publicará aquí el código fuente privado.
 
