@@ -1,0 +1,30 @@
+name: Suggest a feature
+description: Share a problem or opportunity VoyagerOS could address.
+title: "[Feature]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the product need without including private files, personal data, or confidential information.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to do?
+      description: Describe the task or friction you encounter.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What would a useful result look like?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Example scenario (optional)
+      description: Share a short example if it helps explain the request.
+    validations:
+      required: false

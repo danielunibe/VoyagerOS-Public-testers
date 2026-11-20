@@ -2,29 +2,47 @@
 
 ## Canal oficial
 
-Las descargas se publican en [GitHub Releases](https://github.com/danielunibe/VoyagerOS-Public-testers/releases). El historial de cambios está en [CHANGELOG.md](../CHANGELOG.md) y cada release usa la estructura de [RELEASE_NOTES_TEMPLATE.md](RELEASE_NOTES_TEMPLATE.md).
+Las descargas aprobadas aparecerán en [GitHub Releases](https://github.com/danielunibe/VoyagerOS-Public-testers/releases). El historial público está en [CHANGELOG.md](../CHANGELOG.md), y las notas futuras seguirán la [plantilla de release](RELEASE_NOTES_TEMPLATE.md).
 
-La versión pública inicial es **0.2.1**. La página de releases permanece vacía hasta que exista un instalador verificable.
+Actualmente no hay versión, tag ni release pública. La versión 0.2.1 mencionada en un borrador anterior nunca se publicó y no está aprobada como versión inicial.
 
-## Numeración
+## Estado de las candidatas locales
 
-Usa números `MAJOR.MINOR.PATCH` en el nombre de la release y dentro del EXE. La primera publicación será `0.2.1`; los siguientes números avanzan después de validar la versión anterior. Los nombres visibles de versión no llevan etiquetas de alpha, beta o prueba.
+- La compilación instalada 0.2.24 está marcada PRIVATE_ALPHA, no está firmada y tiene un fallo confirmado de selección rectangular. No distribuir.
+- Existe una candidata local 0.2.25 para Windows x64, con instalador y ejecutable que coinciden en versión. El ejecutable coincide con la identidad de compilación y con la huella del worktree actual, pero el worktree está modificado y el canal continúa como PRIVATE_ALPHA.
+- Los archivos 0.2.25 no están firmados. La identidad no registra el hash del instalador; por ello no hay una cadena de integridad completa desde el corte de origen hasta el paquete descargable.
+- La instalación, lanzamiento, desinstalación y QA física/visual de esa candidata no se han aceptado. Tampoco están confirmados los términos de redistribución.
 
-## Contenido de una publicación
+Por esas razones, no se ofrece la candidata 0.2.25 en este repositorio.
 
-Adjunta únicamente materiales de distribución pública:
+## Gates de publicación
 
-- Instalador de Windows x64.
-- Archivo de sumas SHA-256.
-- Manifiesto del paquete y requisitos de instalación.
-- Notas con cambios integrados y comprobados, limitaciones confirmadas e instrucciones para actualizar.
+Cada paquete público debe corresponder a un corte de origen aprobado y a una versión reservada para el canal público. Antes de habilitar la descarga se comprobarán:
 
-El SHA-256 y el estado/editor de Authenticode deben corresponder al instalador adjunto. No publiques código privado, logs de QA, datos de usuario, saves, carpetas de build ni archivos de depuración.
+- Instalador para una versión de Windows y arquitectura expresamente documentadas.
+- Correspondencia de versión y hash entre instalador, ejecutable, módulos de runtime y manifiesto.
+- Procedencia del paquete y pruebas asociadas al corte exacto.
+- Instalación, primer inicio, actualización manual, desinstalación y recuperación.
+- Hash SHA-256 para cada artefacto publicado.
+- Estado Authenticode real del instalador y el ejecutable.
+- Requisitos, dependencias, limitaciones conocidas y material de soporte.
+- Términos de distribución confirmados por el propietario.
+
+## Archivos permitidos
+
+Adjunta únicamente materiales preparados para distribución pública:
+
+- Instalador aprobado.
+- Hashes SHA-256 y manifiesto del paquete.
+- Notas de versión, requisitos e instrucciones.
+- Material visual auténtico revisado para privacidad.
+
+No publiques código fuente privado, registros internos, datos personales, saves, carpetas de build ni archivos de depuración.
 
 ## Actualizar VoyagerOS
 
-Por ahora, las personas obtienen nuevas versiones desde la página **Releases** e instalan el instalador publicado. El EXE actual no consulta GitHub ni descarga actualizaciones automáticamente; la página Releases es el canal manual de actualización. No se anunciará actualización automática hasta que exista y se verifique esa función dentro de la aplicación.
+La aplicación no tiene un actualizador automático verificado. Cuando exista una versión pública, las personas obtendrán los cambios manualmente desde Releases e instalarán el paquete publicado.
 
-## Estado 0.2.1
+## Estado actual
 
-**En preparación.** No hay instalador ni release publicados todavía. Las notas de novedades se completarán cuando la candidata pública pase sus gates de procedencia, integridad, firma y aceptación.
+**Preparación; sin versión pública asignada.** Consulta el [preflight público](RELEASE_PREFLIGHT_2026-11-20.md) y las [limitaciones conocidas](KNOWN_LIMITATIONS.md). No descargues ni distribuyas candidatas privadas.
