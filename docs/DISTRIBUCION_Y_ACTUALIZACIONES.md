@@ -11,6 +11,7 @@ Actualmente no hay versión, tag ni release pública. La versión 0.2.1 menciona
 - La compilación instalada 0.2.24 está marcada PRIVATE_ALPHA, no está firmada y tiene un fallo confirmado de selección rectangular. No distribuir.
 - Existe una candidata local 0.2.25 para Windows x64, con instalador y ejecutable que coinciden en versión. El ejecutable coincide con la identidad de compilación y con la huella del worktree actual, pero el worktree está modificado y el canal continúa como PRIVATE_ALPHA.
 - Los archivos 0.2.25 no están firmados. La identidad no registra el hash del instalador; por ello no hay una cadena de integridad completa desde el corte de origen hasta el paquete descargable.
+- CMake declara el proyecto como 0.2.0 mientras el paquete, ejecutable e identidad reportan 0.2.25. La correspondencia no está documentada y no existe versión pública asignada.
 - La instalación, lanzamiento, desinstalación y QA física/visual de esa candidata no se han aceptado. Tampoco están confirmados los términos de redistribución.
 
 Por esas razones, no se ofrece la candidata 0.2.25 en este repositorio.
