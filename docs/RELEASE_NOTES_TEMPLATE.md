@@ -1,21 +1,30 @@
 # VoyagerOS <version>
 
-## Novedades
-- [Solo cambios integrados y comprobados]
+## Overview
+[Describe the verified state of this release.]
 
-## Requisitos
-- [Versión y arquitectura de Windows]
+## What's included
+- [List only changes present in the attached package and covered by verification.]
 
-## Instalación y actualización
-- [Instrucciones para este paquete]
+## Requirements
+- Windows version:
+- Architecture:
+- Dependencies:
 
-## Archivos
-- [Nombre del instalador y propósito]
-- [Manifiesto de actualización, si aplica]
+## Installation and update
+[Give steps verified with this installer. State that updates are manual unless an in-app updater has been verified.]
 
-## Integridad
-- SHA-256: `<hash>`
-- Firma Authenticode: `<estado y editor verificado>`
+## Files
+- [Installer and purpose]
+- [Manifest or other distribution file]
 
-## Limitaciones conocidas
-- [Solo limitaciones confirmadas]
+## Integrity
+- SHA-256:
+- Authenticode status:
+- Signer: [verified publisher or "unsigned"]
+
+## Known limitations
+- [List confirmed limitations and scope of validation.]
+
+## Feedback
+[Link to the repository's issue chooser.]
