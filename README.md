@@ -46,6 +46,7 @@ See the [technical overview](docs/TECHNICAL_OVERVIEW.md) for the high-level comp
 - An earlier public-repository draft listed 0.2.1 as a planned first version. It was never published and is not the current version.
 - The installed private-alpha 0.2.24 build had a confirmed crash during rectangular desktop selection.
 - The current development source contains a repair and a focused regression test. A local 0.2.25 candidate matches its build identity and the current modified worktree, but remains marked PRIVATE_ALPHA, is unsigned, and has not completed physical release-candidate QA.
+- The CMake project declaration is 0.2.0 while the local package, executable, build identity, and package manifest report 0.2.25. Their mapping is not reconciled; no public version is assigned.
 - No public version, download, tag, or GitHub Release has been assigned.
 
 The release evidence and exact blockers are in the [release preflight](docs/RELEASE_PREFLIGHT_2026-11-20.md).
