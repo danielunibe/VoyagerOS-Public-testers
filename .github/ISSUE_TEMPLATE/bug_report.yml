@@ -1,31 +1,43 @@
-name: Reportar un problema
-description: Ayuda a reproducir un fallo de VoyagerOS.
-title: "[Problema]: "
+name: Report a problem
+description: Help reproduce a VoyagerOS issue.
+title: "[Bug]: "
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Comparte únicamente detalles necesarios para reproducir el problema. No adjuntes carpetas, registros ni capturas que expongan datos personales.
+        Share only the details needed to reproduce the issue. Do not attach folders, logs, or screenshots that expose personal information.
   - type: input
     id: version
     attributes:
-      label: Versión de VoyagerOS
-      description: Indica el número visible en la aplicación o en la descarga.
-      placeholder: 0.2.0
+      label: VoyagerOS version
+      description: Use the version shown in the application or the download page.
+      placeholder: Version shown in the app or release
     validations:
       required: true
   - type: input
     id: windows
     attributes:
-      label: Versión de Windows
-      placeholder: Windows 11, versión y arquitectura
+      label: Windows version
+      placeholder: Edition, version, and architecture
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Impact
+      description: How much does this issue affect your use?
+      options:
+        - Blocks evaluation
+        - Major workflow affected
+        - Workaround available
+        - Minor or visual issue
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Pasos para reproducir
+      label: Steps to reproduce
       placeholder: |
         1. …
         2. …
@@ -34,19 +46,19 @@ body:
   - type: textarea
     id: expected
     attributes:
-      label: Resultado esperado
+      label: Expected result
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Resultado observado
+      label: Observed result
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Evidencia opcional
-      description: Quita nombres, rutas, notificaciones y cualquier otro dato personal antes de adjuntar una captura.
+      label: Optional evidence
+      description: Remove names, paths, notifications, and other personal details before attaching a screenshot.
     validations:
       required: false
