@@ -13,6 +13,7 @@ The public repository's main branch had no release or version tag at the start o
 | Installed private-alpha 0.2.24 | Windows executable; unsigned; a crash during rectangular desktop selection was reproduced | Do not distribute |
 | Local 0.2.25 setup candidate | Version 0.2.25; Windows x64; unsigned; channel PRIVATE_ALPHA | Do not publish |
 | 0.2.25 build identity | Source head, source fingerprint, source count, executable version, and executable hash match the current modified worktree and candidate. The build record includes 230/230 automatic CTest results. | Provenance is traceable to a modified worktree, not a clean public source cut |
+| Version declarations | CMake declares project version 0.2.0; the local executable, setup package, build identity, and package manifest report 0.2.25. No public version is assigned. | Version source-of-truth mapping is unresolved; document it and reserve a public version before release |
 | Package contents | Package manifest matches the listed runtime executable and Rust modules; setup executable itself is not recorded in the identity artifact list | End-to-end installer integrity is incomplete |
 | Focused crash regression | Fresh run of the desktop-selection regression test passed 1/1; prior recovery record reports 44 assertions for that test | Source-level evidence only; physical mouse QA on the candidate remains open |
 | Signature | Authenticode reports the 0.2.25 executable and setup candidate as unsigned | Signing decision and distribution policy remain open |
@@ -30,7 +31,7 @@ This recovery request authorizes safe public documentation. The current candidat
 
 ## Required gates before a public pre-release
 
-1. Approve an exact source cut and reserve a public version and channel.
+1. Reconcile the CMake and product-package version declarations; approve an exact source cut and reserve a public version and channel.
 2. Rebuild or repackage from that cut so the setup executable, runtime files, manifest, and integrity record are linked.
 3. Decide the Authenticode signing policy and confirm distribution terms.
 4. Verify install, launch, update/manual replacement, uninstall, and recovery.
