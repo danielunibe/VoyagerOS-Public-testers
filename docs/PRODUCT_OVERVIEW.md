@@ -2,33 +2,48 @@
 
 ## Product statement
 
-VoyagerOS is an in-development native Windows desktop experience. It explores a focused overlay, a Dock, and app and search workflows that coexist with the existing Windows desktop. It is not a standalone operating system and does not replace Windows Explorer or the taskbar.
+VoyagerOS is an in-development native Windows desktop companion. It explores a focused overlay for desktop actions, navigation, search, and contextual tools while preserving Windows as the operating system. It is not a replacement operating system, Windows Explorer, or the taskbar.
 
-## Product problem and vision
+## Problem framing and vision
 
-**Design hypothesis:** A focused desktop layer may make routes to app launch, search, and contextual tools more direct while keeping the familiar Windows environment available. This is a product hypothesis; no user research or measured outcome is claimed here.
+**Design hypothesis:** common desktop actions may be easier to reach when navigation, search, and contextual actions share a consistent native surface. This remains a hypothesis. No interviews, user research, adoption, conversion, or productivity measurements are claimed.
 
-The vision is a purposeful, responsive desktop companion with a consistent visual identity and predictable Windows behavior.
+The product vision is a purposeful desktop layer that feels coherent with VoyagerOS's visual identity and predictable within Windows.
 
-## Approach
+## Intended audience and value
 
-The current product implementation uses a Win32 host, Direct3D 12, DirectComposition, and a Rust core. The product direction preserves the established Dock material and original project artwork. Public documentation and screenshots will use assets approved for public distribution. The public repository is a distribution and feedback channel; development source remains private.
+The intended audience is people evaluating a more direct desktop workflow and testers who can provide reproducible Windows feedback. The intended benefit is shorter paths to app and search actions while retaining the existing Windows environment. This value has not yet been measured with users.
 
-## Capability and validation status
+## Product boundary
 
-| Area | Development status | Public-release validation |
+VoyagerOS is an application-layer desktop experience. Windows continues to provide the operating system, desktop session, application model, and system services. VoyagerOS does not claim to replace Windows or provide a separate operating system.
+
+The public repository is for product documentation, approved distribution artifacts, and feedback. The development source remains in the owner's private repository. No open-source license or redistribution terms are declared here.
+
+## Experience areas
+
+| Area | Development capability | Current evidence |
 |---|---|---|
-| Native desktop overlay and Dock | Present in the development implementation | Visual and physical interaction acceptance is still open; no public capture is included |
-| Search and Spotlight surfaces | Under active development | Not approved as a released capability |
-| Aurora dictation | Integrated development work exists | Real microphone and target-application checks remain open |
-| Public installation and updates | Manual GitHub Releases is the planned distribution path | No public installer, requirements matrix, or published version is available |
+| Desktop | Native desktop surface, icon interaction, and rectangular selection | Source repair and automated regression coverage exist; release-candidate physical QA is pending |
+| Dock | Dark native Dock and pointer-driven magnification | Controller automation exists; visual acceptance is pending |
+| Start and Spotlight | Gesture arbitration, search controller, and direct-answer logic | Search logic has automated verification; physical surface acceptance is pending |
+| Aurora | Contextual push-to-talk with native Windows speech and audio integration | Wired source and automated contracts exist; microphone and target-app QA is pending |
+| QuickLook | Native preview service and lifecycle management | Integration exists; visible-window QA is pending |
+| Settings and personalization | Native Win32 settings and persistence | Automated contracts exist; a current privacy-reviewed product screenshot is not available |
+| Window management | Native host-window styles, hit testing, and message routing | Automated policy contracts exist; broader physical and multi-monitor acceptance remains open |
 
-The statuses above distinguish development work from user-facing release acceptance. Passing code or synthetic tests alone does not establish that a Windows interaction is ready for testers.
+The [feature matrix](FEATURE_MATRIX.md) assigns the approved status labels and defines their scope.
 
-## Scope boundaries
+## Product principles evidenced in the current work
 
-VoyagerOS is a Windows desktop companion, not a replacement operating system. No universal Windows compatibility, stable-release status, automatic updating, or user-research outcome is claimed here.
+1. **Complement Windows:** preserve the familiar desktop and system services.
+2. **Preserve identity:** retain the established dark Dock material and original VoyagerOS artwork.
+3. **Treat stability as product work:** the rectangular-selection crash was reproduced in the older private-alpha build, repaired in development source, and covered by a focused regression test.
+4. **Separate component tests from acceptance:** automation is evidence for specific contracts, not proof of complete user-facing behavior.
+5. **Release only one attributable package:** version, installer, runtime files, identity, integrity data, and notes must refer to the same candidate.
 
-## Current state
+## Current release state
 
-The repository is preparing a public tester experience. The public version is unassigned until an exact-source `PUBLIC` package passes its release checks. The [distribution guide](DISTRIBUCION_Y_ACTUALIZACIONES.md) explains the release path; the [roadmap](ROADMAP.md) tracks the open validation work.
+The public version is unassigned. A local 0.2.25 installer candidate exists, but it is marked PRIVATE_ALPHA, unsigned, built from a modified worktree, and has not completed physical acceptance or distribution review. It is not a public download.
+
+For the latest checks, see the [release preflight](RELEASE_PREFLIGHT_2026-11-20.md) and [known limitations](KNOWN_LIMITATIONS.md).

@@ -1,39 +1,39 @@
 # VoyagerOS product roadmap
 
-This roadmap lists open product and release work. It contains no promised dates. Items move forward only when the relevant evidence is available.
+This roadmap has no promised dates. Work advances when the evidence for its exit condition is available.
 
-## Now — prepare a verifiable public cut
+## Now — create a releasable source and package
 
-- Assign a public version from the approved version ledger.
-- Build a `PUBLIC` package from an exact source cut.
-- Confirm package provenance, architecture, dependencies, manifest, hashes, and Authenticode state.
-- Verify install, launch, update, uninstall, and recovery instructions against the candidate.
-- Publish exact Windows requirements and known limitations with the artifact.
+- Produce an owner-approved, exact source cut for public distribution.
+- Reserve a public version and channel; do not reuse the private-alpha label.
+- Tie the installer, executable, runtime modules, manifest, and hashes into one integrity record.
+- Confirm distribution terms and decide how the unsigned state will be handled.
+- Verify install, first launch, update, uninstall, and recovery instructions on a supported Windows configuration.
 
-**Exit condition:** One candidate package, one version, matching evidence and notes, and a reviewed privacy boundary.
+**Exit condition:** one candidate has matching source, identity, installer, integrity, requirements, and release notes, with distribution terms confirmed.
 
-## Next — accept the native desktop experience
+## Next — accept the desktop experience
 
-- Capture the real interface for public documentation after a privacy review.
-- Verify the Dock, search surfaces, keyboard and pointer interaction, focus, and window ordering on Windows.
-- Check display and DPI changes and multi-monitor behavior.
-- Confirm accessibility and reduced-motion expectations that are in scope for the candidate.
+- Exercise rectangular selection with a physical mouse on the exact candidate.
+- Verify Dock appearance, Start gestures, search surfaces, hit testing, focus, and window ordering.
+- Check display and DPI changes, multiple monitors, and return to the native Windows desktop.
+- Capture current product views from the accepted candidate and review them for personal information.
 
-**Exit condition:** Human visual and physical acceptance for the exact release candidate, with open limitations recorded.
+**Exit condition:** physical and visual acceptance covers the candidate and any remaining limitations are documented.
 
-## In parallel — validate Aurora
+## In parallel — validate Aurora and QuickLook
 
-- Test with a real microphone and the supported Windows speech components.
-- Check text entry in VoyagerOS surfaces and representative external applications.
-- Confirm safe behavior when there is no editable destination, the target is elevated, or the OS blocks access.
-- Document language and device requirements before any public capability claim.
+- Test Aurora with a real microphone and the Windows speech components that the candidate requires.
+- Check privacy permission states and representative editable and non-editable target applications.
+- Verify QuickLook presentation, supported file types, focus, close behavior, and shell shutdown.
 
-**Exit condition:** Reproducible acceptance evidence and clear compatibility limits.
+**Exit condition:** repeatable acceptance evidence and explicit compatibility requirements.
 
-## Later — learn from tester feedback
+## Later — use tester feedback
 
-- Use the privacy-aware bug and feature-request templates.
-- Prioritize issues from reproducible reports and actual product evidence.
+- Open the tester channel only after a verified public build exists.
+- Use the privacy-aware [bug report](../.github/ISSUE_TEMPLATE/bug_report.yml) and [feature request](../.github/ISSUE_TEMPLATE/feature_request.yml) templates.
+- Prioritize reproducible issues by user impact, release risk, and evidence.
 - Update the roadmap after each release review.
 
-No tester feedback or market validation is claimed before it exists.
+No user-research findings, adoption numbers, or commercial outcomes are claimed before they exist.

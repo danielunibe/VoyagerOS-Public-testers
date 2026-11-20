@@ -1,51 +1,63 @@
 # VoyagerOS product decisions
 
-These decisions describe the product and release boundaries visible in the current development and distribution plan. They do not imply that every feature has passed public acceptance.
+This record explains decisions visible in the implementation and the current release process. It does not claim user research or that every capability is release-ready.
 
-## 1. VoyagerOS complements Windows
+## 1. Complement Windows rather than replace it
 
-**Decision:** Build VoyagerOS as a native layer that coexists with the existing Windows desktop.
+**Decision:** build VoyagerOS as a native desktop layer within the existing Windows session.
 
-**Reason:** The product explores desktop interactions while preserving familiar Windows surfaces and application behavior.
+**Evidence:** the active runtime uses Win32 windows, window procedures, and Windows system integration.
 
-**Trade-off:** Window ordering, focus, input, display changes, and multi-monitor behavior need explicit Windows acceptance before release.
+**Trade-off:** focus, z-order, input routing, display changes, and multi-monitor behavior must be validated on a real Windows desktop.
 
-## 2. Keep the native Windows runtime
+## 2. Keep the native rendering path
 
-**Decision:** The intended runtime uses Win32, Direct3D 12, DirectComposition, and a Rust core.
+**Decision:** retain the C++20 Win32 host with Direct3D 12 and DirectComposition, alongside the Rust core and Windows-platform components.
 
-**Reason:** The product is designed around Windows desktop composition and native integration.
+**Evidence:** the active CMake target links the Windows graphics and composition libraries; the native bridge loads Rust components through an explicit ABI.
 
-**Trade-off:** Claims about behavior depend on validation in the real Windows desktop, not only on code-level or synthetic checks.
+**Trade-off:** code-level contracts are useful but do not prove visual quality, hardware compatibility, or runtime behavior on a tester's machine.
 
 ## 3. Preserve the established visual identity
 
-**Decision:** Retain the established Dock material and original project artwork. Use only visual assets approved for public distribution.
+**Decision:** retain the dark Dock material and original VoyagerOS brand artwork. Public visuals must come from the product or approved assets.
 
-**Reason:** Consistent materials help identify VoyagerOS across its product surface and public documentation.
+**Evidence:** this preparation publishes the official project emblem and deliberately excludes old beta imagery and QA fixtures as current product screenshots.
 
-**Trade-off:** Public screenshots must come from the actual product and must be reviewed for personal information before use.
+**Trade-off:** the gallery remains incomplete until authentic current captures can be made and privacy-reviewed.
 
-## 4. Separate development source from public distribution
+## 4. Prioritize visible stability risks
 
-**Decision:** Keep source development in its private repository. Use this public repository for approved downloads, documentation, and tester feedback.
+**Decision:** treat the desktop rectangular-selection crash as a release blocker and prioritize its source repair and regression coverage.
 
-**Reason:** Testers need a clear distribution surface without exposing internal files, audit logs, user data, saves, or build directories.
+**Evidence:** the older installed private-alpha build had a confirmed crash on that interaction; the development source contains the fix and the focused test passed.
 
-**Trade-off:** Each public package needs a verifiable connection to an exact source cut even though the source remains private.
+**Trade-off:** source and automated results cannot substitute for exercising the exact installer and executable with a physical mouse.
 
-## 5. Assign public versions from verified packages
+## 5. Assign versions from verified packages
 
-**Decision:** Do not promise a public version number until a matching `PUBLIC` package exists and passes release checks.
+**Decision:** do not publish a version based only on a draft, source version, or executable file.
 
-**Reason:** The public number, EXE, installer, manifest, hash, and notes must refer to one artifact.
+**Evidence:** the local 0.2.25 candidate identifies itself as PRIVATE_ALPHA and its installer is not linked to the build-identity artifact list.
 
-**Trade-off:** A planned number can change before the first release; private-alpha labels do not become public versions.
+**Trade-off:** the public version remains unassigned until the exact source cut, runtime, setup package, tests, and release notes agree.
 
-## 6. Keep update instructions honest
+## 6. Keep distribution and development source separate
 
-**Decision:** Describe GitHub Releases as the manual update channel until an in-app updater is implemented and verified.
+**Decision:** use the public repository for approved documentation, release packages, and tester feedback; keep private development files, audit evidence, user data, saves, and build folders out of it.
 
-**Reason:** Users should not expect automatic downloads or installation behavior that the product does not provide.
+**Trade-off:** each package needs a complete, reviewable provenance record even though the development source is not mirrored here.
 
-**Trade-off:** Testers will need to check Releases and install each approved update themselves.
+## 7. Describe updates honestly
+
+**Decision:** until a verified updater exists, describe the future update path as manual through GitHub Releases.
+
+**Trade-off:** testers must download and install a published update themselves. No automatic update behavior is promised.
+
+## 8. Do not invent licensing or validation
+
+**Decision:** do not add a license, assert open-source status, or describe unrun QA as passed.
+
+**Evidence:** the repository currently has no license file; the exact candidate has not completed physical or installation acceptance.
+
+**Trade-off:** distribution remains blocked until the owner confirms terms and release gates pass.

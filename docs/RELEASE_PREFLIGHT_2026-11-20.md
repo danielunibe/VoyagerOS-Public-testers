@@ -1,34 +1,43 @@
 # Public release preflight — 2026-11-20
 
-## Summary
+## Decision
 
-**Documentation review: ready for review. Public download: blocked.**
+**Public documentation: ready to publish. Binary release: blocked.**
 
-The public repository is a distribution and tester-feedback channel, separate from the private development source. At the time of this review, its `main` branch has no version tags or GitHub Releases. The previous documentation named 0.2.1 as a planned initial version, but no artifact or release with that version exists.
+The public repository's main branch had no release or version tag at the start of this review. The earlier draft's 0.2.1 label was never published and is not the current public version.
 
-## Artifact inventory
+## Candidate evidence
 
-| Item inspected | Observed state | Public decision |
+| Item | Observed state | Distribution decision |
 |---|---|---|
-| Local development package 0.2.24 | Windows x64; package manifest labels it `PRIVATE_ALPHA`; package and EXE are unsigned | Exclude from public downloads |
-| 0.2.24 build identity | Records a modified source tree and worktree modifications; records 224/224 automated CTest results | Not an exact public source cut; the test record is context for this private-alpha build only |
-| Public package | No candidate with channel `PUBLIC` was available for this review | Do not assign a public version or write release notes for an artifact |
-| Public screenshot | None included in this preparation | Add only after an actual product capture is available and reviewed for privacy |
-| Public releases and tags | None found | Keep the Releases page empty |
+| Installed private-alpha 0.2.24 | Windows executable; unsigned; a crash during rectangular desktop selection was reproduced | Do not distribute |
+| Local 0.2.25 setup candidate | Version 0.2.25; Windows x64; unsigned; channel PRIVATE_ALPHA | Do not publish |
+| 0.2.25 build identity | Source head, source fingerprint, source count, executable version, and executable hash match the current modified worktree and candidate. The build record includes 230/230 automatic CTest results. | Provenance is traceable to a modified worktree, not a clean public source cut |
+| Package contents | Package manifest matches the listed runtime executable and Rust modules; setup executable itself is not recorded in the identity artifact list | End-to-end installer integrity is incomplete |
+| Focused crash regression | Fresh run of the desktop-selection regression test passed 1/1; prior recovery record reports 44 assertions for that test | Source-level evidence only; physical mouse QA on the candidate remains open |
+| Signature | Authenticode reports the 0.2.25 executable and setup candidate as unsigned | Signing decision and distribution policy remain open |
+| Requirements and install behavior | No public Windows minimum, dependency matrix, or installation/launch/uninstall acceptance is attached to this candidate | Do not publish instructions as verified |
+| Current screenshots | No current product screenshots available or approved | Publish official branding only; keep screenshot gallery empty with a precise capture checklist |
+| Public version and release | No public version, tag, or GitHub Release | Leave Downloads unavailable |
 
-The inspected private-alpha package is not a substitute for a public build. Its test record does not establish acceptance of a public artifact, and its unsigned state must not be represented as signed.
+The source fix for rectangular selection is present in the exact worktree fingerprint recorded for the 0.2.25 candidate. This establishes build provenance, but the executable was not launched for this review and the physical interaction has not been accepted.
 
-## Release blockers
+## Why the earlier publication stopped
 
-1. Produce a `PUBLIC` package from an exact, attributable source cut.
-2. Match the version, architecture, installer, EXE, manifest, and release notes.
-3. Verify installation, launch, uninstall, and recovery behavior on a supported Windows configuration.
-4. Finalize and publish requirements, dependency details, SHA-256 values, signature status, and known limitations.
-5. Complete human visual and physical interaction acceptance for the exact candidate.
-6. Decide whether the public unsigned-package limitation is acceptable or whether signing is required.
+The available evidence is the previous task's conversation record and GitHub state. PR #1 had been prepared on a documentation branch but remained open; the prior plan required explicit approval before merging or creating a release. No release-creation or binary-upload attempt is recorded, and authentication failure was not the cause of the prior pause.
 
-## Privacy and scope review
+This recovery request authorizes safe public documentation. The current candidate still fails the binary gates, so no release was attempted. The CLI reports no authenticated GitHub host, and the connected GitHub tool supports repository content writes but not release creation or binary uploads. Those tool limits are secondary to the candidate's technical and distribution blockers.
 
-This preparation adds public-facing product and release documentation only. It does not copy source code, local file paths, internal audit logs, user data, saves, build outputs, or debug files into the public repository.
+## Required gates before a public pre-release
 
-No public artifact, version tag, or GitHub Release is created by this preflight. The release remains unpublished pending candidate verification and the owner's publication decision.
+1. Approve an exact source cut and reserve a public version and channel.
+2. Rebuild or repackage from that cut so the setup executable, runtime files, manifest, and integrity record are linked.
+3. Decide the Authenticode signing policy and confirm distribution terms.
+4. Verify install, launch, update/manual replacement, uninstall, and recovery.
+5. Perform physical desktop selection, Start, Dock, Spotlight, QuickLook, and Aurora checks on that exact candidate.
+6. Publish confirmed Windows requirements, dependencies, known limitations, and SHA-256 values.
+7. Capture real product screens from the accepted candidate and review them for personal information.
+
+## Scope and privacy
+
+This public preparation adds product documentation and the official VoyagerOS emblem. It does not add development source, build folders, internal logs, private local paths, user data, saves, or unapproved runtime binaries. The repository has no license file; no license or redistribution terms were added.

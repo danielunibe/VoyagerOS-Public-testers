@@ -1,9 +1,12 @@
 # Public changelog
 
-Release notes will be added here only when a matching public installer is available on [GitHub Releases](https://github.com/danielunibe/VoyagerOS-Public-testers/releases).
+No application release has been published. Public version numbers and application changes will be listed here only when a matching, verified package is available on [GitHub Releases](https://github.com/danielunibe/VoyagerOS-Public-testers/releases).
 
-## Before the first public release
+## 2026-11-20 — Public documentation preparation
 
-An earlier repository draft listed **0.2.1** as the planned first version. It was not published. The public version remains unassigned until a verified package is produced from an exact source cut and passes the release gates.
+- Added product overview, product decisions, technical overview, feature verification matrix, roadmap, and known limitations.
+- Added the approved VoyagerOS brand emblem and a privacy-aware screenshot capture checklist.
+- Documented why the local 0.2.25 PRIVATE_ALPHA installer is not a public download.
+- No application binary, installer, source code, or release tag was published.
 
-Private-alpha versions, including the inspected 0.2.24 package, are not public releases and are not listed as download versions.
+An earlier draft named 0.2.1 as a planned first version. It was not released. Private-alpha versions, including 0.2.24 and 0.2.25, are not public downloads.
