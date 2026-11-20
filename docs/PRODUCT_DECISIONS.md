@@ -18,11 +18,11 @@ These decisions describe the product and release boundaries visible in the curre
 
 **Trade-off:** Claims about behavior depend on validation in the real Windows desktop, not only on code-level or synthetic checks.
 
-## 3. Preserve the established VoyagerOS visual identity
+## 3. Preserve the established visual identity
 
-**Decision:** Retain the Windows avatar, original artwork, and dark Dock material in the product presentation.
+**Decision:** Retain the established Dock material and original project artwork. Use only visual assets approved for public distribution.
 
-**Reason:** These assets and materials are part of the established project identity.
+**Reason:** Consistent materials help identify VoyagerOS across its product surface and public documentation.
 
 **Trade-off:** Public screenshots must come from the actual product and must be reviewed for personal information before use.
 
