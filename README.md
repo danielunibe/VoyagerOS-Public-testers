@@ -1,23 +1,41 @@
-# VoyagerOS Public testers
+# VoyagerOS
 
-Repositorio público de distribución de VoyagerOS. Aquí se publicarán las descargas para el público y los testers, las notas de cada versión, la información del canal de actualización y el material promocional aprobado. El código de desarrollo se mantiene en el repositorio privado.
+**A native Windows desktop experience exploring a focused desktop overlay, Dock, and app and search workflows.**
 
-## Descargar VoyagerOS
+VoyagerOS is an in-development companion layer for the existing Windows desktop. It explores faster, more contextual ways to reach desktop actions while preserving Windows as the operating system. VoyagerOS is not a standalone operating system or a replacement for Windows Explorer or the taskbar.
 
-[Ver descargas y versiones publicadas](https://github.com/danielunibe/VoyagerOS-Public-testers/releases)
+The native runtime is built around Win32, Direct3D 12, DirectComposition, and a Rust core. Development work is kept in a private source repository; this public repository is for distribution, release notes, and tester feedback.
 
-Consulta la [guía de distribución y actualizaciones](docs/DISTRIBUCION_Y_ACTUALIZACIONES.md). Por ahora, las actualizaciones se instalan desde la página Releases.
+> **Public status: preparation.** No public download or release is available yet.
 
-## Versión 0.2.1
+## Product status
 
-La numeración pública comienza en **0.2.1**. Esta versión está en preparación; todavía no hay un instalador publicado en este repositorio. La descarga se habilitará al completar la validación de la candidata, el paquete, su procedencia y los datos de integridad.
+- This repository currently has no public release or version tag.
+- An earlier draft named **0.2.1** as a planned first release. That was a planning label, not a published or currently approved public version.
+- The locally inspected **0.2.24** package is marked `PRIVATE_ALPHA`, is unsigned, and was built from a modified source tree. It is excluded from public distribution.
+- The public version will be assigned from a verified `PUBLIC` package after its source, installer, requirements, and integrity checks are complete.
+- No product screenshot is included in this preparation.
 
-Cada publicación incluirá las novedades confirmadas, requisitos, instrucciones de instalación y hashes de los archivos descargables. No se publicará aquí el código fuente privado.
+## Product direction
 
-## Reportar un problema
+The development implementation includes a native desktop layer and a dark Dock. Search and Spotlight surfaces are being developed alongside Aurora dictation. These areas have not all completed the visual, interaction, and device checks needed for a public release.
 
-Abre un [reporte de problema](https://github.com/danielunibe/VoyagerOS-Public-testers/issues/new/choose) e indica la versión, la edición de Windows, los pasos para reproducirlo y el resultado observado. No adjuntes datos personales ni archivos de tus carpetas.
+See the [product overview](docs/PRODUCT_OVERVIEW.md), [product decisions](docs/PRODUCT_DECISIONS.md), and [roadmap](docs/ROADMAP.md) for scope and current validation gaps.
 
-## Material visual
+## Downloads
 
-Todavía no se publican imágenes promocionales ni capturas del producto. Se añadirán cuando representen la identidad y la interfaz real de VoyagerOS, indicando la versión exacta de origen. Las imágenes conceptuales no se presentarán como material del producto.
+There is no public installer yet. When a candidate passes the release gates, downloads will appear on [GitHub Releases](https://github.com/danielunibe/VoyagerOS-Public-testers/releases), with version-matched installation instructions, SHA-256, and an accurate Authenticode status.
+
+The current update path is manual through GitHub Releases. The application does not provide an in-app automatic updater.
+
+## Requirements
+
+Public Windows version, architecture, dependencies, and installation steps will be documented with the first verified public package. Do not use private-alpha builds as public downloads.
+
+## Feedback
+
+Use [GitHub Issues](https://github.com/danielunibe/VoyagerOS-Public-testers/issues/new/choose) to report a reproducible problem or suggest an improvement. Include only the details needed to understand the report. Remove names, file paths, notifications, and other personal information from optional evidence.
+
+## Project boundary
+
+This repository contains public product and distribution material. It does not mirror the private source tree, internal audit logs, user data, saves, or build directories. Release readiness and the current artifact inventory are summarized in the [public preflight](docs/RELEASE_PREFLIGHT_2026-11-20.md).
