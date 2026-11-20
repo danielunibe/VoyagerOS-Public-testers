@@ -1,8 +1,8 @@
 # VoyagerOS
 
-**A native Windows desktop experience exploring a focused desktop overlay, Dock, and app and search workflows.**
+**A native Windows desktop companion exploring a focused overlay, Dock, and contextual app and search interactions.**
 
-VoyagerOS is an in-development companion layer for the existing Windows desktop. It explores faster, more contextual ways to reach desktop actions while preserving Windows as the operating system. VoyagerOS is not a standalone operating system or a replacement for Windows Explorer or the taskbar.
+VoyagerOS is an in-development native desktop experience for the existing Windows environment. It explores more direct ways to reach desktop actions while preserving Windows as the operating system. VoyagerOS is not a standalone operating system or a replacement for Windows Explorer or the taskbar.
 
 The native runtime is built around Win32, Direct3D 12, DirectComposition, and a Rust core. Development work is kept in a private source repository; this public repository is for distribution, release notes, and tester feedback.
 
