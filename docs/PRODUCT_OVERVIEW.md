@@ -6,13 +6,13 @@ VoyagerOS is an in-development native Windows desktop experience. It explores a 
 
 ## Product problem and vision
 
-Desktop actions such as reaching an app, a search surface, or a contextual tool can involve switching between several Windows surfaces. VoyagerOS explores whether a coherent native layer can make those interactions feel more direct while keeping the familiar Windows environment available.
+**Design hypothesis:** A focused desktop layer may make routes to app launch, search, and contextual tools more direct while keeping the familiar Windows environment available. This is a product hypothesis; no user research or measured outcome is claimed here.
 
 The vision is a purposeful, responsive desktop companion with a consistent visual identity and predictable Windows behavior.
 
 ## Approach
 
-The current product implementation uses a Win32 host, Direct3D 12, DirectComposition, and a Rust core. The product direction preserves the Windows avatar, original project artwork, and dark Dock material. The public repository is a distribution and feedback channel; development source remains private.
+The current product implementation uses a Win32 host, Direct3D 12, DirectComposition, and a Rust core. The product direction preserves the established Dock material and original project artwork. Public documentation and screenshots will use assets approved for public distribution. The public repository is a distribution and feedback channel; development source remains private.
 
 ## Capability and validation status
 
