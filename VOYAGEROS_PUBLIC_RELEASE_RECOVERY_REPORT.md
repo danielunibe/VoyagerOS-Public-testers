@@ -7,7 +7,7 @@
 
 The public repository now has a product portfolio, technical and release documentation, approved brand artwork, and a precise screenshot checklist. No current product screenshot was available, so none was fabricated or presented as current.
 
-A local 0.2.25 Windows x64 installer and executable exist. The executable and build identity match the current modified worktree, and the build record contains automated test evidence. The package remains PRIVATE_ALPHA and unsigned; its installer hash is not part of the build-identity artifact list, installation and physical QA have not been accepted, and distribution terms are unconfirmed. No binary or GitHub Release was published.
+A local 0.2.25 Windows x64 installer and executable exist. The executable and build identity match the current modified worktree, and the build record contains automated test evidence. CMake declares project version 0.2.0 while the package and executable report 0.2.25; this mapping is unresolved and no public version is assigned. The package remains PRIVATE_ALPHA and unsigned; its installer hash is not part of the build-identity artifact list, installation and physical QA have not been accepted, and distribution terms are unconfirmed. No binary or GitHub Release was published.
 
 ## Deliverable status
 
@@ -21,6 +21,7 @@ A local 0.2.25 Windows x64 installer and executable exist. The executable and bu
 | Feature Matrix | DOCUMENTATION_PUBLISHED | Each capability uses one of the requested verification labels with its evidence scope. |
 | Roadmap | DOCUMENTATION_PUBLISHED | Gates and next priorities have explicit exit conditions and no promised dates. |
 | Installation | BINARY_RELEASE_BLOCKED | The local 0.2.25 installer is private-alpha, unsigned, not linked into the identity artifact list, and has no accepted install/launch/uninstall QA. |
+| Version assignment | BINARY_RELEASE_BLOCKED | CMake declares 0.2.0 while the local package and executable identify as 0.2.25; the version mapping is unresolved and no public version is assigned. |
 | Changelog | DOCUMENTATION_PUBLISHED | The documentation update is recorded separately from application releases; no app version is claimed. |
 | GitHub metadata | PUBLISHED_VERIFIED | The English About description and 11 relevant topics are saved and visible on the public repository page. |
 | Social Preview | BLOCKED | No current product screenshot was available. The emblem alone would not satisfy the requested product preview, so no preview image was fabricated or configured. |
@@ -50,6 +51,7 @@ This request authorizes safe documentation publication. The documentation was up
 | Blocker | Evidence | Action needed | Risk if skipped |
 |---|---|---|---|
 | No approved public source cut | Current traceable source is a modified worktree | Create and approve a clean source cut, then rebuild/repackage from it | Published files may not correspond to an approved revision |
+| Version source of truth unresolved | CMake reports 0.2.0; local package, executable, identity, and manifest report 0.2.25 | Document the version mapping and reserve one public version from the approved source cut | Download, release notes, and diagnostics could disagree about the product version |
 | Installer integrity gap | Setup executable is not recorded in build identity | Record installer hash and verify its contents against the approved runtime manifest | A valid executable hash would not prove the downloaded installer contents |
 | Physical and installation QA | No exact-candidate install, launch, mouse, Start, Aurora, or multi-monitor acceptance | Run the approved candidate through documented Windows checks | A serious runtime regression could reach testers |
 | Unsigned candidate | Authenticode status is NotSigned | Owner decides signing policy and signs if required | SmartScreen/trust friction and weaker publisher identity |
