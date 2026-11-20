@@ -6,6 +6,7 @@ These limitations are based on current repository and artifact evidence. They de
 
 - **No public version or download:** the Releases page has no published release. The local setup candidate is marked PRIVATE_ALPHA.
 - **Modified source cut:** the 0.2.25 build identity matches the current modified worktree and its executable, but that worktree is not a clean, owner-approved public source cut.
+- **Unresolved version mapping:** CMake declares project version 0.2.0, while the local executable, installer, build identity, and package manifest report 0.2.25. The public version remains unassigned until the owner documents the version source of truth.
 - **Installer integrity record is incomplete:** the identity record covers the executable and runtime artifacts; the setup executable itself is not listed in that record.
 - **Unsigned files:** Authenticode reports the 0.2.25 executable and setup candidate as unsigned.
 - **Distribution terms:** the public repository has no license file and no redistribution terms have been established.
