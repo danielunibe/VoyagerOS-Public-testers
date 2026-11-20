@@ -22,12 +22,12 @@ A local 0.2.25 Windows x64 installer and executable exist. The executable and bu
 | Roadmap | DOCUMENTATION_PUBLISHED | Gates and next priorities have explicit exit conditions and no promised dates. |
 | Installation | BINARY_RELEASE_BLOCKED | The local 0.2.25 installer is private-alpha, unsigned, not linked into the identity artifact list, and has no accepted install/launch/uninstall QA. |
 | Changelog | DOCUMENTATION_PUBLISHED | The documentation update is recorded separately from application releases; no app version is claimed. |
-| GitHub metadata | PARTIALLY_COMPLETED | The repository has an existing Spanish description; topics are empty. The connected GitHub content tool cannot edit About/topics. |
+| GitHub metadata | PUBLISHED_VERIFIED | The English About description and 11 relevant topics are saved and visible on the public repository page. |
 | Release notes | BINARY_RELEASE_BLOCKED | A template exists, but no notes are tied to an approved public artifact. |
 | Binary | BINARY_RELEASE_BLOCKED | 0.2.25 is PRIVATE_ALPHA, built from a modified worktree, unsigned, and not accepted through physical and installation QA. |
 | SHA-256 manifest | BINARY_RELEASE_BLOCKED | The executable is matched to build identity, but the installer is absent from that identity record. No public package manifest is emitted. |
 | GitHub Release | BINARY_RELEASE_BLOCKED | No release was created; no artifact meets the public gates. The connected tool lacks release creation/upload, and GitHub CLI has no authenticated host. |
-| Remote verification | PUBLISHED_VERIFIED | After integration, the README, documents, brand image, and checklist are verified on the public default branch. |
+| Remote verification | PUBLISHED_VERIFIED | The README, documents, complete brand image, screenshot checklist, About description, and 11 topics were verified on the public default branch. |
 
 ## Publication recovery findings
 
@@ -54,11 +54,11 @@ This request authorizes safe documentation publication. The documentation was up
 | Unsigned candidate | Authenticode status is NotSigned | Owner decides signing policy and signs if required | SmartScreen/trust friction and weaker publisher identity |
 | Distribution terms absent | Repository has no license or redistribution terms | Owner confirms permitted distribution terms before uploading binaries | Legal permission to distribute remains unclear |
 | Screenshot gallery unavailable | Native UI capture was unavailable and no new screenshots were supplied | Capture the four views in assets/screenshots from the accepted build | Recruiters cannot inspect the current UI directly |
-| GitHub About/topics not editable by connected tools | GitHub content connection has no repository-metadata write action; CLI reports no authenticated host | Update About/topics from an authorized GitHub session | Repository discovery metadata remains incomplete |
+
 | Release upload unavailable through current tools | Connector supports content writes but not release creation or asset upload; CLI is unauthenticated | After all gates pass, use an authorized GitHub Release interface or authenticated CLI/API | No verified package can be attached to a release |
 
 ## Published scope and licensing
 
 The public documentation describes VoyagerOS as a Windows desktop companion, not an operating-system replacement. Only the official project emblem is published as visual branding. No source, build output, private path, personal data, license, or binary was added.
 
-The public repository has no license file. This report does not create or imply redistribution rights.
+The repository About description and topics were updated in GitHub. The public repository has no license file. This report does not create or imply redistribution rights.
